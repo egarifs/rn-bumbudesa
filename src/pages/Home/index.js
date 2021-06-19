@@ -7,7 +7,7 @@ import {
   useWindowDimensions,
   View
 } from 'react-native';
-import { SceneMap, TabView } from 'react-native-tab-view';
+import {SceneMap, TabBar, TabView} from 'react-native-tab-view';
 import {
   FoodDummy1,
   FoodDummy2,
@@ -17,15 +17,35 @@ import {
 } from '../../assets';
 import { FoodCard, Gap } from '../../components';
 
+const renderTabBar = props => (
+  <TabBar
+    {...props}
+    indicatorStyle={{
+      backgroundColor: '#020202',
+      height: 3,
+      marginLeft: 3,
+    }}
+    style={{backgroundColor: 'white'}}
+    tabStyle={{width: 'auto'}}
+    renderLabel={({route, focused, color}) => (
+      <Text
+        style={{
+          fontFamily: 'Poppins-Medium',
+          color: focused ? '#020202' : '#8D92A3',
+        }}>
+        {route.title}
+      </Text>
+    )}
+  />
+);
+
 const FirstRoute = () => <View style={{flex: 1, backgroundColor: '#ff4081'}} />;
 
 const SecondRoute = () => (
   <View style={{flex: 1, backgroundColor: '#673ab7'}} />
 );
 
-
 const Home = () => {
-
   const renderScene = SceneMap({
     1: FirstRoute,
     2: SecondRoute,
@@ -51,19 +71,19 @@ const Home = () => {
         <Image source={ProfileDummy} style={styles.profile} />
       </View>
       <View>
-
-      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        <View style={styles.foodcardContainer}>
-          <Gap width={24} />
-          <FoodCard image={FoodDummy1} />
-          <FoodCard image={FoodDummy2} />
-          <FoodCard image={FoodDummy3} />
-          <FoodCard image={FoodDummy4} />
-        </View>
-      </ScrollView>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <View style={styles.foodcardContainer}>
+            <Gap width={24} />
+            <FoodCard image={FoodDummy1} />
+            <FoodCard image={FoodDummy2} />
+            <FoodCard image={FoodDummy3} />
+            <FoodCard image={FoodDummy4} />
+          </View>
+        </ScrollView>
       </View>
       <View style={styles.tabContainer}>
         <TabView
+          renderTabBar={renderTabBar}
           navigationState={{index, routes}}
           renderScene={renderScene}
           onIndexChange={setIndex}
@@ -105,7 +125,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginVertical: 24,
   },
-  tabContainer:{
-    flex: 1
-  }
+  tabContainer: {
+    flex: 1,
+  },
 });
