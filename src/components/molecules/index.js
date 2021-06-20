@@ -5,9 +5,11 @@ import Header from './Header';
 import HomeProfile from './HomeProfile';
 import HomeTabSection from './HomeTabSection';
 import ItemListFood from './ItemListFood';
+import ItemValue from './ItemValue';
 import Rating from './Rating';
 
 export {
+  ItemValue,
   Header,
   Counter,
   BottomNavigator,

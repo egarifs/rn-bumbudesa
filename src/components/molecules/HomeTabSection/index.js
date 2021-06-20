@@ -43,20 +43,24 @@ const NewTaste = () => {
   const navigation = useNavigation();
   return (
     <ScrollView>
-      <View style={{paddingTop: 8}}>
+      <View style={{paddingTop: 8, paddingHorizontal: 24}}>
         <ItemListFood
+        rating={4}
           image={FoodDummy1}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        rating={4}
           image={FoodDummy2}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        rating={4}
           image={FoodDummy3}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        rating={4}
           image={FoodDummy4}
           onPress={() => navigation.navigate('FoodDetail')}
         />
@@ -71,20 +75,24 @@ const Popular = () => {
 
   return (
     <ScrollView>
-      <View style={{paddingTop: 8}}>
+      <View style={{paddingTop: 8, paddingHorizontal: 24}}>
         <ItemListFood
+        rating={2}
           image={FoodDummy4}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        rating={2}
           image={FoodDummy1}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        rating={2}
           image={FoodDummy4}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        rating={2}
           image={FoodDummy2}
           onPress={() => navigation.navigate('FoodDetail')}
         />
@@ -96,20 +104,24 @@ const Recommended = () => {
   const navigation = useNavigation();
   return (
     <ScrollView>
-      <View style={{paddingTop: 8}}>
+      <View style={{paddingTop: 8, paddingHorizontal: 24}}>
         <ItemListFood
+        rating={3}
           image={FoodDummy3}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        rating={3}
           image={FoodDummy4}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        rating={3}
           image={FoodDummy3}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        rating={3}
           image={FoodDummy3}
           onPress={() => navigation.navigate('FoodDetail')}
         />
@@ -140,7 +152,7 @@ const HomeTabSection = () => {
       renderScene={renderScene}
       onIndexChange={setIndex}
       initialLayout={{width: layout.width}}
-      style={{backgroundColor: 'white '}}
+      style={{backgroundColor: 'white'}}
     />
   );
 };

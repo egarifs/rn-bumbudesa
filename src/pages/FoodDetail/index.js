@@ -4,12 +4,12 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from 'react-native';
-import {FoodDummy6, IcBackWhite} from '../../assets';
-import {Button, Counter, Rating} from '../../components';
+import { FoodDummy6, IcBackWhite } from '../../assets';
+import { Button, Counter, Rating } from '../../components';
 
-const FoodDetail = () => {
+const FoodDetail = ({navigation}) => {
   return (
     <View style={styles.page}>
       <ImageBackground source={FoodDummy6} style={styles.cover}>
@@ -40,7 +40,7 @@ const FoodDetail = () => {
             <Text style={styles.priceTotal}>IDR 12.000.000</Text>
           </View>
           <View style={styles.button}>
-            <Button text="Order now" />
+            <Button text="Order now" onPress={()=> navigation.navigate('OrderSummary')}/>
           </View>
         </View>
       </View>

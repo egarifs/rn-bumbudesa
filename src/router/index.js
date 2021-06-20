@@ -1,17 +1,18 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
-import {BottomNavigator} from '../components';
+import { BottomNavigator } from '../components';
 import {
   FoodDetail,
   Home,
   Order,
+  OrderSummary,
   Profile,
   SignIn,
   SignUp,
   SignUpAddress,
   SplashScreen,
-  SuccessSignUp,
+  SuccessSignUp
 } from '../pages';
 
 const Stack = createStackNavigator();
@@ -63,6 +64,11 @@ const Router = () => {
       <Stack.Screen
         name="FoodDetail"
         component={FoodDetail}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="OrderSummary"
+        component={OrderSummary}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
