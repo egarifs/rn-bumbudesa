@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   title: {fontSize: 22, fontFamily: 'Poppins-Medium', color: '#020202'},
   subTitle: {fontSize: 14, fontFamily: 'Poppins-Light', color: '#8D92A3'},
   back: {
-    backgroundColor: 'yellow',
+    backgroundColor: 'white',
     padding: 16,
     marginRight: 16,
     marginLeft: -10,

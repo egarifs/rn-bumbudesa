@@ -1,4 +1,5 @@
 import BottomNavigator from './BottomNavigator';
+import Counter from './Counter';
 import FoodCard from './FoodCard';
 import Header from './Header';
 import HomeProfile from './HomeProfile';
@@ -8,6 +9,7 @@ import Rating from './Rating';
 
 export {
   Header,
+  Counter,
   BottomNavigator,
   FoodCard,
   HomeTabSection,

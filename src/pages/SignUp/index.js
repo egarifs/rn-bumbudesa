@@ -1,11 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Button, Gap, Header, TextInput } from '../../components';
 
 const SignUp = ({navigation}) => {
   return (
     <View style={styles.page}>
       <Header title="Sign Up" subTitle="Registrasi and Eat" onBack={() => {}} />
+      <ScrollView>
+
       <View style={styles.container}>
         <View style={styles.photo}>
           <View style={styles.borderPhoto}>
@@ -26,6 +28,7 @@ const SignUp = ({navigation}) => {
         <Gap height={24} />
         <Button text="Continue" onPress={() => navigation.navigate('SignUpAddress') }/>
       </View>
+      </ScrollView>
     </View>
   );
 };
