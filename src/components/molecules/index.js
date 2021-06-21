@@ -1,5 +1,6 @@
 import BottomNavigator from './BottomNavigator';
 import Counter from './Counter';
+import EmptyOrder from './EmptyOrder';
 import FoodCard from './FoodCard';
 import Header from './Header';
 import HomeProfile from './HomeProfile';
@@ -9,6 +10,7 @@ import ItemValue from './ItemValue';
 import Rating from './Rating';
 
 export {
+  EmptyOrder,
   ItemValue,
   Header,
   Counter,

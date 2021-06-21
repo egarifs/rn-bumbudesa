@@ -1,12 +1,14 @@
+import {useNavigation} from '@react-navigation/core';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { IlSuccessOrder } from '../../assets';
-import { Button, Gap } from '../../components';
+import {StyleSheet, Text, View} from 'react-native';
+import {IlEmptyOrder} from '../../../assets';
+import {Button, Gap} from '../../atoms';
 
-const SuccessOrder = ({navigation}) => {
+const EmptyOrder = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.page}>
-      <IlSuccessOrder />
+      <IlEmptyOrder />
       <Gap height={30} />
       <Text style={styles.title}>You’ve Made Order</Text>
       <Gap height={6} />
@@ -16,32 +18,23 @@ const SuccessOrder = ({navigation}) => {
 
       <View style={styles.buttonContainer}>
         <Button
-          text="Order Other Foods"
+          text="Find Foods"
           onPress={() => navigation.replace('MainApp')}
         />
       </View>
       <Gap height={12} />
-      <View style={styles.buttonContainer}>
-        <Button
-          text="View My Order"
-          //main app adalah tab,
-          onPress={() => navigation.replace('MainApp',  {screen: 'Order'})}
-          color="#8D92A3"
-          textColor="white"
-        />
-      </View>
     </View>
   );
 };
 
-export default SuccessOrder;
+export default EmptyOrder;
 
 const styles = StyleSheet.create({
   page: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   title: {
     fontSize: 20,
