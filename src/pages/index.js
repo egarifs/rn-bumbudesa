@@ -8,17 +8,19 @@ import SignUp from './SignUp';
 import SignUpAddress from './SignUpAddress';
 import SplashScreen from './SplashScreen';
 import SuccessSignUp from './SuccesSignUp';
+import SuccessOrder from './SuccessOrder';
 
 export {
-    OrderSummary,
-    SplashScreen,
-    SignIn,
-    SignUp,
-    SignUpAddress,
-    SuccessSignUp,
-    Home,
-    Profile,
-    Order,
-    FoodDetail,
+  SuccessOrder,
+  OrderSummary,
+  SplashScreen,
+  SignIn,
+  SignUp,
+  SignUpAddress,
+  SuccessSignUp,
+  Home,
+  Profile,
+  Order,
+  FoodDetail,
 };
 
