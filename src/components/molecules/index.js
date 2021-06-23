@@ -7,6 +7,7 @@ import HomeProfile from './HomeProfile';
 import HomeTabSection from './HomeTabSection';
 import ItemListFood from './ItemListFood';
 import ItemValue from './ItemValue';
+import OrderTabSection from './OrderTabSection';
 import Rating from './Rating';
 
 export {
@@ -17,6 +18,7 @@ export {
   BottomNavigator,
   FoodCard,
   HomeTabSection,
+  OrderTabSection,
   HomeProfile,
   Rating,
   ItemListFood,
