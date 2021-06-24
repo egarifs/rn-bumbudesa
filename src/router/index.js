@@ -6,6 +6,7 @@ import {
   FoodDetail,
   Home,
   Order,
+  OrderDetail,
   OrderSummary,
   Profile,
   SignIn,
@@ -13,7 +14,7 @@ import {
   SignUpAddress,
   SplashScreen,
   SuccessOrder,
-  SuccessSignUp,
+  SuccessSignUp
 } from '../pages';
 
 const Stack = createStackNavigator();
@@ -35,47 +36,52 @@ const Router = () => {
       <Stack.Screen
         name="SplashScreen"
         component={SplashScreen}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="SignIn"
         component={SignIn}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="SignUp"
         component={SignUp}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="SignUpAddress"
         component={SignUpAddress}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="SuccessSignUp"
         component={SuccessSignUp}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="MainApp"
         component={MainApp}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="FoodDetail"
         component={FoodDetail}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="OrderSummary"
         component={OrderSummary}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="SuccessOrder"
         component={SuccessOrder}
-        options={{headerShown: false}}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="OrderDetail"
+        component={OrderDetail}
+        options={{ headerShown: false }}
       />
     </Stack.Navigator>
   );

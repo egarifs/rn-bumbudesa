@@ -1,6 +1,7 @@
 import FoodDetail from './FoodDetail';
 import Home from './Home';
 import Order from './Order';
+import OrderDetail from './OrderDetail';
 import OrderSummary from './OrderSummary';
 import Profile from './Profile';
 import SignIn from './SignIn';
@@ -11,6 +12,7 @@ import SuccessSignUp from './SuccesSignUp';
 import SuccessOrder from './SuccessOrder';
 
 export {
+  OrderDetail,
   SuccessOrder,
   OrderSummary,
   SplashScreen,

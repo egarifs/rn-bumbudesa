@@ -1,14 +1,14 @@
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {
   ScrollView,
   StyleSheet,
   Text,
   useWindowDimensions,
-  View,
+  View
 } from 'react-native';
-import {SceneMap, TabBar, TabView} from 'react-native-tab-view';
-import {FoodDummy1, FoodDummy2, FoodDummy3, FoodDummy4} from '../../../assets';
+import { SceneMap, TabBar, TabView } from 'react-native-tab-view';
+import { FoodDummy1, FoodDummy2, FoodDummy3, FoodDummy4 } from '../../../assets';
 import ItemListFood from '../ItemListFood';
 
 const renderTabBar = props => (
@@ -94,7 +94,7 @@ const PastOrder = () => {
         <ItemListFood
           rating={2}
           image={FoodDummy4}
-          onPress={() => navigation.navigate('FoodDetail')}
+          onPress={() => navigation.navigate('OrderDetail')}
           type="past-orders"
           items={3}
           price="20.000"
@@ -104,7 +104,7 @@ const PastOrder = () => {
         <ItemListFood
           rating={2}
           image={FoodDummy1}
-          onPress={() => navigation.navigate('FoodDetail')}
+          onPress={() => navigation.navigate('OrderDetail')}
           type="past-orders"
           items={3}
           price="20.000"
@@ -115,7 +115,7 @@ const PastOrder = () => {
         <ItemListFood
           rating={2}
           image={FoodDummy4}
-          onPress={() => navigation.navigate('FoodDetail')}
+          onPress={() => navigation.navigate('OrderDetail')}
           type="past-orders"
           items={3}
           price="20.000"
@@ -126,7 +126,7 @@ const PastOrder = () => {
         <ItemListFood
           rating={2}
           image={FoodDummy2}
-          onPress={() => navigation.navigate('FoodDetail')}
+          onPress={() => navigation.navigate('OrderDetail')}
           type="past-orders"
           items={3}
           price="20.000"
